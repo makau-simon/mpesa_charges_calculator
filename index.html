@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Pesa Charges | Calculator</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <h1>M-Pesa Charges Calculator</h1>
+    <hr>
+    <div id="input-container">
+        <label for="amount">Enter the amount of money (ksh) </label>
+        <input type="number" id="amount" placeholder="0.00">
+    </div>
+    <button id="calculate_btn">Calculate</button>
+    <hr>
+    <h3>Estimated Fee </h3>
+    <table id="resultsTable" border="1" cellspacing="0" cellpadding="10" class="safaricom-table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Fee (KES)</th>
+            <th>Receiver Gets (KES)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Category">Send Money (Registered)</td>
+            <td data-label="Fee (KES)" id="sendFee">—</td>
+            <td data-label="Receiver Gets (KES)" id="sendGets">—</td>
+        </tr>
+        <tr>
+            <td data-label="Category">Withdraw from Agent</td>
+            <td data-label="Fee (KES)" id="agentFee">—</td>
+            <td data-label="Receiver Gets (KES)" id="agentGets">—</td>
+        </tr>
+     
+    </tbody>
+</table>
+<div id="notification" class="notification">Calculation Completed!</div>
+<footer>&copy; Unlisted Code Logic 2025</footer>
+<script src="main.js"></script>
+</body>
+</html>
