@@ -12,7 +12,12 @@ const agentGets = document.querySelector("#agentGets");
 
 //Adding click event listener
 calculateButton.addEventListener("click", () => {
+  calculate()
+})
   //getting user input
+  
+  function calculate() {
+    // Tab to edit
   if (!inputAmount.value.trim() == "") {
     //fetching the data from a json file
     fetch("mpesa_charges.json")
@@ -36,7 +41,7 @@ calculateButton.addEventListener("click", () => {
   } else {
     alert("Please enter amount!");
   }
-});
+}
 
 //function to calculate the fee
 function getFee(amount, table) {
@@ -56,3 +61,10 @@ function showNotification() {
     notification.classList.remove("show");
   }, 2000); // disappears after 2 seconds
 }
+
+
+document.addEventListener("keydown",(e)=>{
+if(e.key =="enter"){
+calculate()
+}
+})
