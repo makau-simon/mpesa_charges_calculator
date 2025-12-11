@@ -64,7 +64,7 @@ function showNotification() {
 
 
 document.addEventListener("keydown",(e)=>{
-if(e.key =="enter"){
+if(e.key =="Enter"){
 calculate()
 }
 })
